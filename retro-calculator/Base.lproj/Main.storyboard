@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Minecraft.ttf">
@@ -286,6 +287,18 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AD6-Fz-ZSt">
+                                <rect key="frame" x="455" y="548" width="125" height="37"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="L6a-GP-Ggd"/>
+                                    <constraint firstAttribute="width" constant="125" id="mKb-Je-5fd"/>
+                                </constraints>
+                                <state key="normal" image="clear"/>
+                                <connections>
+                                    <action selector="onClearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HiY-dX-WXS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -300,9 +313,11 @@
                             <constraint firstItem="jyj-V2-5e0" firstAttribute="top" secondItem="q99-eR-c1b" secondAttribute="top" constant="18" id="QCX-hw-JsA"/>
                             <constraint firstItem="tnC-6D-N69" firstAttribute="centerX" secondItem="q99-eR-c1b" secondAttribute="centerX" id="Uai-Rf-yJc"/>
                             <constraint firstItem="tnC-6D-N69" firstAttribute="centerY" secondItem="q99-eR-c1b" secondAttribute="centerY" constant="36" id="UzS-hi-02W"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AD6-Fz-ZSt" secondAttribute="bottom" constant="15" id="XbM-vn-oao"/>
                             <constraint firstAttribute="trailing" secondItem="YAZ-l9-TzB" secondAttribute="trailing" id="loB-g0-DDq"/>
                             <constraint firstItem="q99-eR-c1b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rbO-h4-dhn"/>
                             <constraint firstAttribute="bottom" secondItem="YAZ-l9-TzB" secondAttribute="bottom" id="s7V-LG-irx"/>
+                            <constraint firstItem="AD6-Fz-ZSt" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="tOV-cj-NI7"/>
                         </constraints>
                     </view>
                     <connections>
@@ -327,6 +342,7 @@
         <image name="9" width="111" height="114"/>
         <image name="add" width="111" height="114"/>
         <image name="backpanel" width="620" height="938"/>
+        <image name="clear" width="333" height="114"/>
         <image name="counter" width="516" height="133"/>
         <image name="divide" width="111" height="114"/>
         <image name="equal" width="111" height="114"/>

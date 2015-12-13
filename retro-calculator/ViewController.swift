@@ -71,12 +71,22 @@ class ViewController: UIViewController {
         processOperation(currentOperation)
     }
     
+    @IBAction func onClearPressed(sender: AnyObject) {
+        playSound()
+        
+        leftValStr = ""
+        rightValStr = ""
+        currentOperation = Operation.Empty
+        runningNum = ""
+        result = ""
+        outputLbl.text = "0"
+    }
+    
     
     func processOperation(op: Operation) {
         playSound()
         
         if currentOperation != Operation.Empty {
-            
             //a user selected an operator and then selected another operator without first selecting a number
             if (runningNum != "") {
                 rightValStr = runningNum
